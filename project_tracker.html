@@ -7,11 +7,9 @@
 
     <title>QuickTrack</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Optional: Custom Styles -->
     <style>
         body {
             background-color: #f4f4f4;
@@ -67,14 +65,14 @@
 </head>
 
 <body>
-    <header style="background-color: #ebcd94;" class="w-100 py-2 px-3 shadow-sm">
-        <div style="height: 50px;"  class="d-flex align-items-center">
-            <img src="liolio.png" alt="Liolio" class="me-3" style="max-height: 40px;">
-            <h3 class="fw-bold mb-0">QuickTrack</h3>
+    <header style="background-color: #ebcd94;" class="w-100 py-2 px-3 shadow-sm fixed-top">
+        <div style="height: 45px;" class="d-flex align-items-center">
+            <img src="liolio.png" alt="LIOLIO" class="me-3" style="max-height: 35px;">
+            <h4 class="fw-bold mb-0">QuickTrack</h4>
         </div>
     </header>
-    <div class="mb-4">
-        
+    <div class="mt-5 mb-4">
+
         <div class="container-fluid py-5 px-2">
             <div class="text-center mb-4">
                 <h2>Data Ticket Tracker</h2>
@@ -86,7 +84,7 @@
 
                     <!-- CARD 1 -->
                     <div class="col-12 col-md-3">
-                        <div class="card card-bg  h-100 shadow-sm rounded-3">
+                        <div class="card card-bg h-100 shadow-sm rounded-3">
                             <div class="card-body text-center">
 
                                 <h6 class="fw-bold text-brown mb-3" style="color:#000000;">
@@ -96,7 +94,6 @@
                                 <h3 class="fw-bold mb-3">12</h3>
 
                                 <hr>
-
                                 <div
                                     class="d-flex align-items-center justify-content-center mt-2 small text-muted gap-2">
 
@@ -118,7 +115,7 @@
                             <div class="card-body text-center">
 
                                 <h6 class="fw-bold mb-3" style="color:#000000;">
-                                    On Track
+                                    In Progress
                                 </h6>
 
                                 <h3 class="fw-bold text-primary mb-3">6</h3>
@@ -173,7 +170,7 @@
                             <div class="card-body text-center">
 
                                 <h6 class="fw-bold mb-3" style="color:#000000;">
-                                    Backlog
+                                    Queue
                                 </h6>
 
                                 <h3 class="fw-bold text-danger mb-3">2</h3>
@@ -200,15 +197,15 @@
 
         <div class="container mt-2 px-2">
             <h4 class="text-left fw-bold m-1 mb-4">Team Overview</h4>
-            
-            <!-- Header (Hidden on Mobile) -->
+
+            <!-- Team overview table header (hidden on mobile) -->
             <div class="row fw-semibold text-muted small px-3 mb-2 d-none d-md-flex">
                 <div class="col-md-2">Team</div>
                 <div class="col-md-2 text-center">Total Tickets</div>
-                <div class="col-md-2 text-center">On Track</div>
+                <div class="col-md-2 text-center">In Progress</div>
                 <div class="col-md-2 text-center">Completed</div>
-                <div class="col-md-2 text-center">Backlog</div>
-                <div class="col-md-2 text-center">Movement Status</div>
+                <div class="col-md-2 text-center">Queue</div>
+                <div class="col-md-2 text-center">Progress</div>
             </div>
 
             <div class="team-row bg-white rounded-3 shadow-sm p-3 mb-4">
@@ -237,18 +234,18 @@
                     </div>
 
                     <div class="col-6 col-md-2 text-md-center text-danger fw-semibold">
-                        <div class="d-md-none small text-muted">Backlog</div>
+                        <div class="d-md-none small text-muted">Queue</div>
                         3
                     </div>
 
-                    <div class="col-12 col-md-2 d-sm-flex align-items-center">
-
-                        <div class="progress flex-grow-1 me-2 mb-1 mb-sm-0" style="height:8px;">
+                    <div class="col-12 col-md-2 d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start">
+                        <div class="progress me-sm-2 mb-1 mb-sm-0" style="height:8px; width: 100%;">
                             <div class="progress-bar bg-primary" style="width:27%;"></div>
                         </div>
 
                         <div class="small text-muted fw-semibold">
                             27%
+                            <span class="text d-inline d-sm-none">completed</span>
                         </div>
 
                     </div>
@@ -283,20 +280,20 @@
                     </div>
 
                     <div class="col-6 col-md-2 text-md-center text-danger fw-semibold">
-                        <div class="d-md-none small text-muted">Backlog</div>
+                        <div class="d-md-none small text-muted">Queue</div>
                         2
                     </div>
 
-                    <div class="col-12 col-md-2 d-sm-flex align-items-center">
-
-                        <div class="progress flex-grow-1 me-2 mb-1 mb-sm-0" style="height:8px;">
+                    <div
+                        class="col-12 col-md-2 d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start">
+                        <div class="progress me-sm-2 mb-1 mb-sm-0" style="height:8px; width: 100%;">
                             <div class="progress-bar bg-primary" style="width:65%;"></div>
                         </div>
 
                         <div class="small text-muted fw-semibold">
                             65%
+                            <span class="text d-inline d-sm-none">completed</span>
                         </div>
-
                     </div>
 
                 </div>
@@ -310,14 +307,29 @@
 
             <div class="container p-0">
                 <div class="col-12 bg-light p-3 mb-4 rounded-3 shadow-sm">
-                    <div class="col-12 fw-bold mb-2 text-left">Business Intelligence</div>
+
+                    <div class="row align-items-center mb-1">
+                        <div class="col-12 col-md-4 d-flex flex-row align-items-center mb-1 mb-md-0">
+                            <div class="fw-bold me-2">Business Intelligence</div>
+                            <span class="badge bg-warning text-dark" id="biQueueCount">1 task(s) in Queue</span>
+                        </div>
+
+                        <div class="col-12 col-md-8">
+                            <div class="d-flex gap-2 justify-content-md-end justify-content-start mt-1 mt-md-0">
+                                <input id="biSearchInput" type="text" class="form-control" placeholder="Search..."
+                                    style="max-width: 300px;">
+
+                            </div>
+                        </div>
+                    </div>
                     <div class="table-responsive">
-                        <table class="table table-striped mt-1 table-fixed">
+                        <table id="biTable" class="table table-striped mt-1 table-fixed">
                             <thead>
                                 <tr>
-                                    <th scope="col">User</th>
+                                    <th scope="col">Division</th>
+                                    <th scope="col">Stakeholder</th>
                                     <th scope="col">Assignee</th>
-                                    <th class="subject-col" scope="col">Subject</th>
+                                    <th class="subject-col" scope="col">Project</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Priority</th>
                                     <th scope="col">Category</th>
@@ -329,6 +341,7 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>Retail</td>
                                     <td>Akmal</td>
                                     <td>Udin</td>
                                     <td>Cargo Weight Monitoring</td>
@@ -341,6 +354,7 @@
                                             class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
                                 </tr>
                                 <tr>
+                                    <td>Finance</td>
                                     <td>Daffa</td>
                                     <td>Diah</td>
                                     <td>Automate Deposit Customer</td>
@@ -353,6 +367,7 @@
                                             class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
                                 </tr>
                                 <tr>
+                                    <td>Ops</td>
                                     <td>Ervan</td>
                                     <td>Shinta</td>
                                     <td>Dashboard 1234</td>
@@ -374,75 +389,124 @@
 
             <div class="container p-0">
                 <div class="col-12 bg-light p-3 mb-4 rounded-3 shadow-sm">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                        <div class="fw-bold text-start">Data Operations</div>
-                        <div class="dropdown">
-                            <button
-                                class="btn btn-sm btn-outline-success bg-success text-white px-3 py-1 dropdown-toggle"
-                                type="button" id="createTaskDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                Create Task
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="createTaskDropdown">
-                                <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" href="#">
-                                        Adhoc Core
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=10">User CX</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=11">User Ops</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=12">User Network</a></li>
+                    <div class="row align-items-center mb-1">
+                        <div class="col-12 col-md-4 d-flex flex-row align-items-center mb-1 mb-md-0">
+                            <div class="fw-bold me-2">Data Operations</div>
+                            <span class="badge bg-warning text-dark" id="doQueueCount">0 task(s) in Queue</span>
+                        </div>
+
+                        <div class="col-12 col-md-8 mt-1 mt-md-0 align-items-center">
+                            <div
+                                class="d-flex gap-2 justify-content-md-end justify-content-between align-items-stretch">
+                                <input id="doSearchInput" type="text" class="form-control" placeholder="Search..."
+                                    style="max-width: 300px;">
+
+                                <div class="dropdown">
+                                    <button
+                                        class="btn btn-sm btn-outline-success bg-success text-white px-3 py-1 dropdown-toggle h-100"
+                                        type="button" id="createTaskDropdown" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Create Task
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="createTaskDropdown">
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                                Adhoc Core
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=10">User
+                                                        CX</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=11">User
+                                                        Ops</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=12">User
+                                                        Network</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                                Adhoc Finance
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=18">User
+                                                        Costing</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=19">User
+                                                        Billing</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=20">User
+                                                        Internal Control</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=26">User
+                                                        FPA</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=27">User
+                                                        Collection</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=29">User
+                                                        Pricing</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=30">User
+                                                        DO</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=31">User
+                                                        FC</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                                Adhoc Goal Scorer
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=13">User
+                                                        Marketing</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=14">User
+                                                        Retail</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=16">User
+                                                        Sales</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=28">User
+                                                        Corp Strategy</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                                Adhoc Tech
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=24">User
+                                                        Product</a></li>
+                                                <li><a class="dropdown-item"
+                                                        href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=25">User
+                                                        Engineer & QA</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                                href="https://data-project.thelionparcel.com/projects">Go
+                                                To OpenProject</a></li>
                                     </ul>
-                                </li>
-                                <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" href="#">
-                                        Adhoc Finance
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=18">User Costing</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=19">User Billing</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=20">User Internal Control</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=26">User FPA</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=27">User Collection</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=29">User Pricing</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=30">User DO</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=31">User FC</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" href="#">
-                                        Adhoc Goal Scorer
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=13">User Marketing</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=14">User Retail</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=16">User Sales</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=28">User Corp Strategy</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" href="#">
-                                        Adhoc Tech
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=24">User Product</a></li>
-                                        <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=25">User Engineer & QA</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="https://data-project.thelionparcel.com/projects">Go
-                                        to OpenProject</a></li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-striped mt-1 table-fixed">
+                        <table id="doTable" class="table table-striped mt-1 table-fixed">
                             <thead>
                                 <tr>
-                                    <th scope="col">User</th>
+                                    <th scope="col">Division</th>
+                                    <th scope="col">Stakeholder</th>
                                     <th scope="col">Assignee</th>
-                                    <th class="subject-col" scope="col">Subject</th>
+                                    <th class="subject-col" scope="col">Task</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Priority</th>
                                     <th class="category-col" scope="col">Category</th>
@@ -454,6 +518,7 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td>Marketing</td>
                                     <td>Akrim Desman</td>
                                     <td>Stefanus Pratama</td>
                                     <td>Digital Marketing - Data User CA Promo 13.13</td>
@@ -466,6 +531,7 @@
                                             class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
                                 </tr>
                                 <tr>
+                                    <td>Product</td>
                                     <td>Risky</td>
                                     <td>Yunus</td>
                                     <td>Add kolom metabase</td>
@@ -478,6 +544,7 @@
                                             class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
                                 </tr>
                                 <tr>
+                                    <td>Finance</td>
                                     <td>Dipta</td>
                                     <td>Asni</td>
                                     <td>Adhoc Task 1234</td>
@@ -497,9 +564,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
-
 </html>
-
-

@@ -1,5 +1,66 @@
 
+function updateQueueCount(tableId, counterId) {
+    const rows = document.querySelectorAll(`#${tableId} tbody tr`);
+    let queueCount = 0;
+
+    rows.forEach(row => {
+        const statusCell = row.querySelector("td:nth-child(5)");
+        if (
+            statusCell &&
+            statusCell.textContent.trim() === "Queue" &&
+            row.offsetParent !== null
+        ) {
+            queueCount++;
+        }
+    });
+
+    const counter = document.getElementById(counterId);
+    if (counter) {
+        counter.textContent = queueCount + " task(s) in Queue";
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById("doSearchInput");
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase().trim();
+        const rows = document.querySelectorAll("#doTable tbody tr");
+
+        rows.forEach(row => {
+            const division = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+            const assignee = row.querySelector("td:nth-child(3)").textContent.toLowerCase();
+
+            if (
+                division.includes(keyword) ||
+                assignee.includes(keyword)
+            ) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            } 
+        });
+    });
+
+    const biSearchInput = document.getElementById("biSearchInput");
+    biSearchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase().trim();
+        const rows = document.querySelectorAll("#biTable tbody tr");
+
+        rows.forEach(row => {
+            const division = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+            const assignee = row.querySelector("td:nth-child(3)").textContent.toLowerCase();
+
+            if (
+                division.includes(keyword) ||
+                assignee.includes(keyword)
+            ) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }   
+        });
+    });
+
     document.querySelectorAll('.dropend > .dropdown-toggle').forEach(function (toggle) {
         toggle.addEventListener('click', function (e) {
             e.preventDefault();
@@ -50,4 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-});
+
+    updateQueueCount('biTable', 'biQueueCount');
+    updateQueueCount('doTable', 'doQueueCount');
+});    
