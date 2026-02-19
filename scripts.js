@@ -21,30 +21,12 @@ function updateQueueCount(tableId, counterId) {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    const searchInput = document.getElementById("doSearchInput");
-    searchInput.addEventListener("input", function () {
-        const keyword = this.value.toLowerCase().trim();
-        const rows = document.querySelectorAll("#doTable tbody tr");
-
-        rows.forEach(row => {
-            const division = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
-            const assignee = row.querySelector("td:nth-child(3)").textContent.toLowerCase();
-
-            if (
-                division.includes(keyword) ||
-                assignee.includes(keyword)
-            ) {
-                row.style.display = "";
-            } else {
-                row.style.display = "none";
-            } 
-        });
-    });
 
     const biSearchInput = document.getElementById("biSearchInput");
     biSearchInput.addEventListener("input", function () {
         const keyword = this.value.toLowerCase().trim();
         const rows = document.querySelectorAll("#biTable tbody tr");
+        let displayedRowsBI = 0;
 
         rows.forEach(row => {
             const division = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
@@ -55,10 +37,47 @@ document.addEventListener('DOMContentLoaded', function () {
                 assignee.includes(keyword)
             ) {
                 row.style.display = "";
+                displayedRowsBI++;
             } else {
                 row.style.display = "none";
-            }   
+            }
         });
+
+        if (displayedRowsBI === 0) {
+            document.getElementById("biNoResults").style.display = "block";
+        } else {
+            document.getElementById("biNoResults").style.display = "none";
+        }
+
+    });
+
+    const searchInput = document.getElementById("doSearchInput");
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase().trim();
+        const rows = document.querySelectorAll("#doTable tbody tr");
+        let displayedRowsDO = 0;
+
+        rows.forEach(row => {
+            const division = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+            const assignee = row.querySelector("td:nth-child(3)").textContent.toLowerCase();
+
+            if (
+                division.includes(keyword) ||
+                assignee.includes(keyword)
+            ) {
+                row.style.display = "";
+                displayedRowsDO++;
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+        if (displayedRowsDO === 0) {
+            document.getElementById("doNoResults").style.display = "block";
+        } else {
+            document.getElementById("doNoResults").style.display = "none";
+        }
+        
     });
 
     document.querySelectorAll('.dropend > .dropdown-toggle').forEach(function (toggle) {

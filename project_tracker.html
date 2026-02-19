@@ -142,7 +142,7 @@
                             <div class="card-body text-center">
 
                                 <h6 class="fw-bold mb-3" style="color:#000000;">
-                                    Complete
+                                    Completed
                                 </h6>
 
                                 <h3 class="fw-bold text-success mb-3">4</h3>
@@ -207,7 +207,7 @@
                 <div class="col-md-2 text-center">Queue</div>
                 <div class="col-md-2 text-center">Progress</div>
             </div>
-
+            
             <div class="team-row bg-white rounded-3 shadow-sm p-3 mb-4">
 
                 <div class="row align-items-center gy-3">
@@ -238,7 +238,8 @@
                         3
                     </div>
 
-                    <div class="col-12 col-md-2 d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start">
+                    <div
+                        class="col-12 col-md-2 d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-start">
                         <div class="progress me-sm-2 mb-1 mb-sm-0" style="height:8px; width: 100%;">
                             <div class="progress-bar bg-primary" style="width:27%;"></div>
                         </div>
@@ -305,6 +306,7 @@
 
             </div>
 
+            <!-- BI Table -->
             <div class="container p-0">
                 <div class="col-12 bg-light p-3 mb-4 rounded-3 shadow-sm">
 
@@ -382,189 +384,197 @@
                             </tbody>
 
                         </table>
-                    </div>
 
-                </div>
-            </div>
-
-            <div class="container p-0">
-                <div class="col-12 bg-light p-3 mb-4 rounded-3 shadow-sm">
-                    <div class="row align-items-center mb-1">
-                        <div class="col-12 col-md-4 d-flex flex-row align-items-center mb-1 mb-md-0">
-                            <div class="fw-bold me-2">Data Operations</div>
-                            <span class="badge bg-warning text-dark" id="doQueueCount">0 task(s) in Queue</span>
+                        <div id="biNoResults" class="text-center mt-3" style="display: none;">
+                            <p class="text-muted">No results found.</p>
                         </div>
 
-                        <div class="col-12 col-md-8 mt-1 mt-md-0 align-items-center">
-                            <div
-                                class="d-flex gap-2 justify-content-md-end justify-content-between align-items-stretch">
-                                <input id="doSearchInput" type="text" class="form-control" placeholder="Search..."
-                                    style="max-width: 300px;">
+                    </div>
+                </div>
 
-                                <div class="dropdown">
-                                    <button
-                                        class="btn btn-sm btn-outline-success bg-success text-white px-3 py-1 dropdown-toggle h-100"
-                                        type="button" id="createTaskDropdown" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Create Task
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="createTaskDropdown">
-                                        <li class="dropend">
-                                            <a class="dropdown-item dropdown-toggle" href="#">
-                                                Adhoc Core
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=10">User
-                                                        CX</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=11">User
-                                                        Ops</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=12">User
-                                                        Network</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropend">
-                                            <a class="dropdown-item dropdown-toggle" href="#">
-                                                Adhoc Finance
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=18">User
-                                                        Costing</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=19">User
-                                                        Billing</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=20">User
-                                                        Internal Control</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=26">User
-                                                        FPA</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=27">User
-                                                        Collection</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=29">User
-                                                        Pricing</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=30">User
-                                                        DO</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=31">User
-                                                        FC</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropend">
-                                            <a class="dropdown-item dropdown-toggle" href="#">
-                                                Adhoc Goal Scorer
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=13">User
-                                                        Marketing</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=14">User
-                                                        Retail</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=16">User
-                                                        Sales</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=28">User
-                                                        Corp Strategy</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="dropend">
-                                            <a class="dropdown-item dropdown-toggle" href="#">
-                                                Adhoc Tech
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=24">User
-                                                        Product</a></li>
-                                                <li><a class="dropdown-item"
-                                                        href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=25">User
-                                                        Engineer & QA</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item"
-                                                href="https://data-project.thelionparcel.com/projects">Go
-                                                To OpenProject</a></li>
-                                    </ul>
+                <!-- DO Table -->
+                <div class="container p-0">
+                    <div class="col-12 bg-light p-3 mb-4 rounded-3 shadow-sm">
+                        <div class="row align-items-center mb-1">
+                            <div class="col-12 col-md-4 d-flex flex-row align-items-center mb-1 mb-md-0">
+                                <div class="fw-bold me-2">Data Operations</div>
+                                <span class="badge bg-warning text-dark" id="doQueueCount">0 task(s) in Queue</span>
+                            </div>
+
+                            <div class="col-12 col-md-8 mt-1 mt-md-0 align-items-center">
+                                <div
+                                    class="d-flex gap-2 justify-content-md-end justify-content-between align-items-stretch">
+                                    <input id="doSearchInput" type="text" class="form-control" placeholder="Search..."
+                                        style="max-width: 300px;">
+
+                                    <div class="dropdown">
+                                        <button
+                                            class="btn btn-sm btn-outline-success bg-success text-white px-3 py-1 dropdown-toggle h-100"
+                                            type="button" id="createTaskDropdown" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Create Task
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="createTaskDropdown">
+                                            <li class="dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Adhoc Core
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=10">User
+                                                            CX</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=11">User
+                                                            Ops</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-operation/work_packages/create_new?type=12">User
+                                                            Network</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Adhoc Finance
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=18">User
+                                                            Costing</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=19">User
+                                                            Billing</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=20">User
+                                                            Internal Control</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=26">User
+                                                            FPA</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=27">User
+                                                            Collection</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=29">User
+                                                            Pricing</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=30">User
+                                                            DO</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-finance/work_packages/create_new?type=31">User
+                                                            FC</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Adhoc Goal Scorer
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=13">User
+                                                            Marketing</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=14">User
+                                                            Retail</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=16">User
+                                                            Sales</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-goal-scorer/work_packages/create_new?type=28">User
+                                                            Corp Strategy</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropend">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Adhoc Tech
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=24">User
+                                                            Product</a></li>
+                                                    <li><a class="dropdown-item"
+                                                            href="https://data-project.thelionparcel.com/projects/team-tech/work_packages/create_new?type=25">User
+                                                            Engineer & QA</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item"
+                                                    href="https://data-project.thelionparcel.com/projects">Go
+                                                    To OpenProject</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="table-responsive">
+                            <table id="doTable" class="table table-striped mt-1 table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Division</th>
+                                        <th scope="col">Stakeholder</th>
+                                        <th scope="col">Assignee</th>
+                                        <th class="subject-col" scope="col">Task</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Priority</th>
+                                        <th class="category-col" scope="col">Category</th>
+                                        <th scope="col">Start Date</th>
+                                        <th scope="col">End Date</th>
+                                        <th scope="col">Detail</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Marketing</td>
+                                        <td>Akrim Desman</td>
+                                        <td>Stefanus Pratama</td>
+                                        <td>Digital Marketing - Data User CA Promo 13.13</td>
+                                        <td><span class="badge bg-success">Done</span></td>
+                                        <td><span class="badge bg-danger">High</span></td>
+                                        <td>Data Preparation (Adhoc) -- Level STT</td>
+                                        <td>02/06/2026</td>
+                                        <td>02/06/2026</td>
+                                        <td><a href="https://data-project.thelionparcel.com/work_packages/11198"
+                                                class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product</td>
+                                        <td>Risky</td>
+                                        <td>Yunus</td>
+                                        <td>Add kolom metabase</td>
+                                        <td><span class="badge bg-primary text-light">In Progress</span></td>
+                                        <td><span class="badge bg-warning text-dark">Normal</span></td>
+                                        <td>Improvement Logic or Visualization</td>
+                                        <td>08/04/2025</td>
+                                        <td>09/03/2025</td>
+                                        <td><a href="https://data-project.thelionparcel.com/work_packages/8513"
+                                                class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Finance</td>
+                                        <td>Dipta</td>
+                                        <td>Asni</td>
+                                        <td>Adhoc Task 1234</td>
+                                        <td><span class="badge bg-danger">Rejected</span></td>
+                                        <td><span class="badge bg-warning text-dark">Normal</span></td>
+                                        <td>New</td>
+                                        <td>06/10/2025</td>
+                                        <td>07/08/2025</td>
+                                        <td><a href=""
+                                                class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                            <div id="doNoResults" class="text-center mt-3" style="display: none;">
+                                <p class="text-muted">No results found.</p>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="table-responsive">
-                        <table id="doTable" class="table table-striped mt-1 table-fixed">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Division</th>
-                                    <th scope="col">Stakeholder</th>
-                                    <th scope="col">Assignee</th>
-                                    <th class="subject-col" scope="col">Task</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Priority</th>
-                                    <th class="category-col" scope="col">Category</th>
-                                    <th scope="col">Start Date</th>
-                                    <th scope="col">End Date</th>
-                                    <th scope="col">Detail</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Marketing</td>
-                                    <td>Akrim Desman</td>
-                                    <td>Stefanus Pratama</td>
-                                    <td>Digital Marketing - Data User CA Promo 13.13</td>
-                                    <td><span class="badge bg-success">Done</span></td>
-                                    <td><span class="badge bg-danger">High</span></td>
-                                    <td>Data Preparation (Adhoc) -- Level STT</td>
-                                    <td>02/06/2026</td>
-                                    <td>02/06/2026</td>
-                                    <td><a href="https://data-project.thelionparcel.com/work_packages/11198"
-                                            class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Product</td>
-                                    <td>Risky</td>
-                                    <td>Yunus</td>
-                                    <td>Add kolom metabase</td>
-                                    <td><span class="badge bg-primary text-light">In Progress</span></td>
-                                    <td><span class="badge bg-warning text-dark">Normal</span></td>
-                                    <td>Improvement Logic or Visualization</td>
-                                    <td>08/04/2025</td>
-                                    <td>09/03/2025</td>
-                                    <td><a href="https://data-project.thelionparcel.com/work_packages/8513"
-                                            class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Finance</td>
-                                    <td>Dipta</td>
-                                    <td>Asni</td>
-                                    <td>Adhoc Task 1234</td>
-                                    <td><span class="badge bg-danger">Rejected</span></td>
-                                    <td><span class="badge bg-warning text-dark">Normal</span></td>
-                                    <td>New</td>
-                                    <td>06/10/2025</td>
-                                    <td>07/08/2025</td>
-                                    <td><a href="" class="btn btn-sm btn-outline-primary text-dark px-2 py-0">Link</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-                    </div>
-
                 </div>
             </div>
-        </div>
-    </div>
 </body>
 
 </html>
